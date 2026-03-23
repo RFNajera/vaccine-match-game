@@ -249,6 +249,176 @@ const ALL_PAIRS = [
     sources: "https://historyofvaccines.org/diseases/coronavirus/"
   }
 }
+,
+  {
+    id: 'influenza',
+    disease: 'Influenza\n(Flu)',
+    vaccine: 'Influenza\nVaccine',
+    vaccineName: 'Influenza Vaccine',
+    info: {
+      diseaseName: 'Influenza (Flu)',
+      preVaccine: 'Before influenza vaccines became available in the 1940s, seasonal influenza caused repeated epidemics and occasional pandemics with substantial illness and death. The 1918 influenza pandemic alone killed hundreds of thousands of people in the United States and tens of millions worldwide.',
+      postVaccine: 'Influenza still causes significant disease each year, but vaccination reduces the risk of severe illness, hospitalization, and death, especially in older adults, young children, pregnant people, and those with chronic conditions.',
+      pathogen: '<strong>Causative agent:</strong> Influenza viruses, primarily influenza A and B. Influenza A viruses can also cause pandemics because they change more dramatically over time.<br><br><strong>Transmission:</strong> Respiratory droplets and aerosols, especially in indoor settings during flu season.<br><br><strong>At risk:</strong> Young children, adults 65 and older, pregnant people, immunocompromised people, and those with chronic medical conditions.',
+      vaccineInfo: '<strong>History:</strong> The first licensed influenza vaccines were developed in the 1940s, building on work identifying influenza viruses in the 1930s. Because influenza viruses change frequently, vaccines are updated regularly to match the strains expected to circulate each season.<br><br><strong>Safety:</strong> Flu vaccines are very safe. Common side effects include soreness at the injection site, mild fatigue, and low-grade fever. Serious adverse events are very rare.',
+      sources: ['https://historyofvaccines.org', 'https://www.chop.edu/vaccine-education-center', 'https://www.who.int']
+    }
+  },
+  {
+    id: 'japanese_encephalitis',
+    disease: 'Japanese\nEncephalitis',
+    vaccine: 'Japanese\nEncephalitis Vaccine',
+    vaccineName: 'Japanese Encephalitis Vaccine',
+    info: {
+      diseaseName: 'Japanese Encephalitis',
+      preVaccine: 'Before vaccination programs, Japanese encephalitis caused large outbreaks across Asia and the western Pacific, especially in rural agricultural areas where mosquitoes, pigs, and wading birds sustained transmission.',
+      postVaccine: 'Vaccination programs in endemic countries have greatly reduced disease burden. In places with strong immunization programs, childhood Japanese encephalitis has fallen dramatically.',
+      pathogen: '<strong>Causative agent:</strong> Japanese encephalitis virus, a flavivirus related to dengue, yellow fever, and West Nile virus.<br><br><strong>Transmission:</strong> Spread by infected mosquitoes, especially <em>Culex</em> species. Humans are dead-end hosts and usually do not pass the virus on.<br><br><strong>At risk:</strong> People living in or traveling to endemic rural areas in Asia and the western Pacific, especially where rice farming and pig farming are common.',
+      vaccineInfo: '<strong>History:</strong> Several Japanese encephalitis vaccines have been developed over time, including inactivated mouse-brain-derived vaccines and newer cell-culture-derived vaccines. Modern vaccines are used for routine immunization in endemic countries and for travelers with meaningful exposure risk.<br><br><strong>Safety:</strong> Current Japanese encephalitis vaccines are generally well tolerated. Common side effects include soreness at the injection site, headache, and mild muscle aches.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int']
+    }
+  },
+  {
+    id: 'rabies',
+    disease: 'Rabies',
+    vaccine: 'Rabies\nVaccine',
+    vaccineName: 'Rabies Vaccine',
+    info: {
+      diseaseName: 'Rabies',
+      preVaccine: 'Before rabies vaccination and modern post-exposure treatment, rabies infection was almost universally fatal once symptoms began. Human deaths were more common when access to wound care, vaccine, and rabies immune globulin was limited.',
+      postVaccine: 'Human rabies deaths are now rare in countries with strong animal vaccination programs and access to post-exposure prophylaxis. Rabies remains a major cause of preventable death in parts of Asia and Africa.',
+      pathogen: '<strong>Causative agent:</strong> Rabies virus, a lyssavirus that infects the nervous system.<br><br><strong>Transmission:</strong> Usually through the bite of an infected animal, with virus in saliva entering broken skin.<br><br><strong>At risk:</strong> People exposed to infected animals, especially dogs in countries where canine rabies remains common, and certain wildlife such as bats, raccoons, skunks, and foxes.',
+      vaccineInfo: '<strong>History:</strong> Louis Pasteur and Émile Roux developed the first rabies vaccine in the 1880s. Modern rabies vaccines are much safer than early nerve-tissue products and are used both before exposure in high-risk groups and after exposure as part of post-exposure prophylaxis.<br><br><strong>Safety:</strong> Rabies vaccines are safe and effective. Common side effects include soreness at the injection site, headache, and mild nausea. The vaccine is lifesaving when given promptly after exposure.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int', 'https://www.chop.edu/vaccine-education-center']
+    }
+  },
+  {
+    id: 'rsv',
+    disease: 'Respiratory Syncytial\nVirus (RSV)',
+    vaccine: 'RSV Vaccine',
+    vaccineName: 'Respiratory Syncytial Virus (RSV) Vaccine',
+    info: {
+      diseaseName: 'Respiratory Syncytial Virus (RSV)',
+      preVaccine: 'Before RSV vaccines became available, RSV was a leading cause of hospitalization in infants and a major cause of severe respiratory illness in older adults. Nearly all children are infected by age 2, but some develop bronchiolitis or pneumonia severe enough to require hospital care.',
+      postVaccine: 'New vaccines for older adults and maternal immunization during pregnancy now provide important tools to reduce severe RSV disease, especially in newborns and older adults.',
+      pathogen: '<strong>Causative agent:</strong> Respiratory syncytial virus, a common respiratory virus in the Pneumoviridae family.<br><br><strong>Transmission:</strong> Respiratory droplets, close contact, and contaminated hands or surfaces.<br><br><strong>At risk:</strong> Infants, especially young babies, older adults, and people with chronic heart or lung disease or weakened immune systems.',
+      vaccineInfo: '<strong>History:</strong> RSV vaccine development was difficult for decades after an early formalin-inactivated vaccine in the 1960s worsened disease in some children. Newer protein-based vaccines and maternal immunization strategies finally led to successful products in the 2020s.<br><br><strong>Safety:</strong> Current RSV vaccines are generally well tolerated. Common side effects include soreness, fatigue, headache, and muscle aches.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int', 'https://www.chop.edu/vaccine-education-center']
+    }
+  },
+  {
+    id: 'shingles',
+    disease: 'Shingles\n(Herpes Zoster)',
+    vaccine: 'Shingles\nVaccine',
+    vaccineName: 'Shingles Vaccine (Shingrix)',
+    info: {
+      diseaseName: 'Shingles (Herpes Zoster)',
+      preVaccine: 'Before shingles vaccines, millions of adults were at risk of painful shingles caused by reactivation of latent varicella-zoster virus. Complications included postherpetic neuralgia, which can cause severe, long-lasting nerve pain.',
+      postVaccine: 'Vaccination has substantially reduced the risk of shingles and postherpetic neuralgia in older adults, especially with the newer recombinant shingles vaccine.',
+      pathogen: '<strong>Causative agent:</strong> Reactivation of varicella-zoster virus, the same virus that causes chickenpox.<br><br><strong>Transmission:</strong> Shingles itself is not spread from person to person in the same way as a cold, but contact with shingles lesions can expose nonimmune people to varicella-zoster virus, causing chickenpox.<br><br><strong>At risk:</strong> Older adults and immunocompromised people are at highest risk of shingles and severe complications.',
+      vaccineInfo: '<strong>History:</strong> The first shingles vaccine, Zostavax, was a live attenuated vaccine. It was later replaced in many settings by Shingrix, a recombinant adjuvanted vaccine with stronger and longer-lasting protection.<br><br><strong>Safety:</strong> Shingrix is very effective and commonly causes short-term side effects such as arm soreness, fatigue, muscle aches, and feverishness for a day or two.',
+      sources: ['https://historyofvaccines.org', 'https://www.chop.edu/vaccine-education-center']
+    }
+  },
+  {
+    id: 'tuberculosis',
+    disease: 'Tuberculosis',
+    vaccine: 'BCG Vaccine',
+    vaccineName: 'BCG Vaccine',
+    info: {
+      diseaseName: 'Tuberculosis',
+      preVaccine: 'Before tuberculosis vaccination and modern tuberculosis control, TB was one of the world’s leading infectious killers, often called consumption. It caused extensive illness and death, especially in crowded settings and among people living in poverty.',
+      postVaccine: 'BCG does not fully prevent pulmonary tuberculosis in adults, but it helps protect infants and young children from severe forms of TB such as TB meningitis and miliary tuberculosis. It remains widely used in countries with high TB burden.',
+      pathogen: '<strong>Causative agent:</strong> <em>Mycobacterium tuberculosis</em>, a slow-growing bacterium that most often affects the lungs but can spread throughout the body.<br><br><strong>Transmission:</strong> Airborne spread through inhalation of infectious droplets or aerosols from a person with pulmonary TB.<br><br><strong>At risk:</strong> People exposed in high-burden settings, those with weakened immune systems, and young children who are especially vulnerable to severe disease.',
+      vaccineInfo: '<strong>History:</strong> Bacille Calmette-Guérin (BCG) was developed by Albert Calmette and Camille Guérin in the early 20th century from an attenuated strain of <em>Mycobacterium bovis</em>. It has been used for more than a century and remains one of the most widely administered vaccines globally.<br><br><strong>Safety:</strong> BCG is generally safe. Common reactions include a small local skin lesion and scar at the injection site. Serious complications are uncommon and occur mainly in people with severe immune deficiency.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int']
+    }
+  },
+  {
+    id: 'typhoid',
+    disease: 'Typhoid',
+    vaccine: 'Typhoid\nVaccine',
+    vaccineName: 'Typhoid Vaccine',
+    info: {
+      diseaseName: 'Typhoid',
+      preVaccine: 'Before vaccination and modern sanitation, typhoid fever caused major outbreaks linked to contaminated food and water. It was a familiar cause of severe prolonged fever and intestinal complications in crowded cities and military settings.',
+      postVaccine: 'Typhoid vaccination helps reduce disease risk in endemic areas and among travelers, but safe water, sanitation, and hygiene remain central to prevention.',
+      pathogen: '<strong>Causative agent:</strong> <em>Salmonella enterica</em> serovar Typhi.<br><br><strong>Transmission:</strong> Fecal-oral spread through contaminated food and water, or by food handlers who are chronic carriers.<br><br><strong>At risk:</strong> People living in or traveling to areas with poor sanitation, especially in parts of South Asia and other endemic regions.',
+      vaccineInfo: '<strong>History:</strong> Typhoid vaccines have existed in various forms for many years, including older whole-cell vaccines and newer oral live attenuated and injectable polysaccharide vaccines. More recently, typhoid conjugate vaccines have improved protection in younger children and support mass vaccination campaigns in endemic settings.<br><br><strong>Safety:</strong> Current typhoid vaccines are generally safe. Common side effects include soreness, mild fever, and stomach upset depending on the product used.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int']
+    }
+  },
+  {
+    id: 'yellow_fever',
+    disease: 'Yellow Fever',
+    vaccine: 'Yellow Fever\nVaccine',
+    vaccineName: 'Yellow Fever Vaccine',
+    info: {
+      diseaseName: 'Yellow Fever',
+      preVaccine: 'Before yellow fever vaccination and mosquito control, yellow fever caused deadly urban epidemics in Africa and the Americas. Case fatality could be high in severe disease, especially when outbreaks spread in areas with little immunity.',
+      postVaccine: 'Vaccination has been highly effective in preventing yellow fever, and a single dose provides long-lasting protection for most people. Outbreak control still depends on vaccination and mosquito control.',
+      pathogen: '<strong>Causative agent:</strong> Yellow fever virus, a flavivirus.<br><br><strong>Transmission:</strong> Spread by infected mosquitoes, including <em>Aedes</em> species in urban cycles.<br><br><strong>At risk:</strong> People living in or traveling to endemic areas of sub-Saharan Africa and tropical South America.',
+      vaccineInfo: '<strong>History:</strong> Max Theiler developed the 17D yellow fever vaccine, work that earned him the Nobel Prize in 1951. The vaccine became a major public health success in tropical medicine and international travel medicine.<br><br><strong>Safety:</strong> The yellow fever vaccine is very effective. Most side effects are mild, but rare serious adverse events can occur, so risk-benefit assessment matters for older travelers and certain immunocompromised people.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int']
+    }
+  },
+  {
+    id: 'anthrax',
+    disease: 'Anthrax',
+    vaccine: 'Anthrax\nVaccine',
+    vaccineName: 'Anthrax Vaccine',
+    info: {
+      diseaseName: 'Anthrax',
+      preVaccine: 'Anthrax has long been recognized as a dangerous zoonotic disease affecting people exposed to infected animals or animal products. It also became a biodefense concern because anthrax spores can be deliberately disseminated.',
+      postVaccine: 'Anthrax vaccination is used mainly for specific high-risk occupational and military groups rather than for routine public vaccination. It helps reduce the risk of disease in people with predictable exposure.',
+      pathogen: '<strong>Causative agent:</strong> <em>Bacillus anthracis</em>, a spore-forming bacterium.<br><br><strong>Transmission:</strong> Exposure can occur through skin contact, inhalation, ingestion, or injection of spores. Person-to-person transmission is extremely uncommon.<br><br><strong>At risk:</strong> Certain laboratory workers, some military personnel, and people who handle potentially infected animal products.',
+      vaccineInfo: '<strong>History:</strong> Anthrax played an important role in the history of microbiology and vaccination, including Louis Pasteur’s early animal vaccine work. Modern anthrax vaccines are based on protective antigen and are used in targeted risk groups.<br><br><strong>Safety:</strong> Anthrax vaccines are generally safe. Common side effects include local soreness and redness. Serious adverse events are rare.',
+      sources: ['https://historyofvaccines.org', 'https://www.cdc.gov']
+    }
+  },
+  {
+    id: 'cholera',
+    disease: 'Cholera',
+    vaccine: 'Cholera\nVaccine',
+    vaccineName: 'Cholera Vaccine',
+    info: {
+      diseaseName: 'Cholera',
+      preVaccine: 'Before oral cholera vaccines and effective rehydration-based control, cholera caused explosive outbreaks with severe dehydration and high mortality, especially where clean water and sanitation were limited.',
+      postVaccine: 'Oral cholera vaccines now support outbreak response and prevention in endemic areas, but they work best alongside safe water, sanitation, and rapid treatment.',
+      pathogen: '<strong>Causative agent:</strong> <em>Vibrio cholerae</em>, especially serogroups O1 and O139 that produce cholera toxin.<br><br><strong>Transmission:</strong> Fecal-oral spread through contaminated water and food.<br><br><strong>At risk:</strong> People living in humanitarian emergencies, conflict settings, and communities without reliable clean water or sanitation.',
+      vaccineInfo: '<strong>History:</strong> Cholera vaccines have existed in older injectable forms, but modern oral cholera vaccines are easier to use in large campaigns and are an important part of global outbreak control strategy.<br><br><strong>Safety:</strong> Oral cholera vaccines are generally well tolerated, with mild gastrointestinal symptoms or soreness being the most common side effects depending on the product.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int']
+    }
+  },
+  {
+    id: 'dengue',
+    disease: 'Dengue',
+    vaccine: 'Dengue\nVaccine',
+    vaccineName: 'Dengue Vaccine',
+    info: {
+      diseaseName: 'Dengue',
+      preVaccine: 'Before dengue vaccines, prevention relied almost entirely on mosquito control and personal protection. Dengue became one of the fastest-growing mosquito-borne viral diseases in the world, with repeated epidemics in tropical and subtropical regions.',
+      postVaccine: 'Dengue vaccines now provide an additional prevention tool in some settings, though their use depends on age, prior infection, and local recommendations because dengue immunology is complicated by four virus serotypes.',
+      pathogen: '<strong>Causative agent:</strong> Dengue virus, a flavivirus with four main serotypes.<br><br><strong>Transmission:</strong> Spread by infected <em>Aedes</em> mosquitoes, especially <em>Aedes aegypti</em>.<br><br><strong>At risk:</strong> People living in or traveling to endemic tropical and subtropical regions. Severe dengue risk can be influenced by prior infection with a different serotype.',
+      vaccineInfo: '<strong>History:</strong> Dengue vaccine development has been challenging because protection must account for four related viruses and the risk of antibody-dependent enhancement. Newer vaccines are being introduced carefully, often with age or prior-infection considerations built into recommendations.<br><br><strong>Safety:</strong> Safety depends on the product and the population receiving it. Common side effects are usually mild, such as soreness, headache, and fatigue.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int']
+    }
+  },
+  {
+    id: 'tick_borne_encephalitis',
+    disease: 'Tick-borne\nEncephalitis',
+    vaccine: 'Tick-borne\nEncephalitis Vaccine',
+    vaccineName: 'Tick-borne Encephalitis Vaccine',
+    info: {
+      diseaseName: 'Tick-borne Encephalitis',
+      preVaccine: 'Before vaccination, tick-borne encephalitis caused regular seasonal neurologic disease in parts of Europe and Asia where infected ticks are found. Risk was greatest for people spending time outdoors in endemic forested areas.',
+      postVaccine: 'Vaccination programs in endemic countries have reduced disease substantially where uptake is high. Travelers and residents in risk areas can lower their chances of infection through vaccination and tick-bite prevention.',
+      pathogen: '<strong>Causative agent:</strong> Tick-borne encephalitis virus, a flavivirus.<br><br><strong>Transmission:</strong> Primarily through bites from infected ticks; occasionally through consumption of unpasteurized dairy products from infected animals.<br><br><strong>At risk:</strong> People living in, working in, or traveling to endemic parts of Europe and Asia with tick exposure.',
+      vaccineInfo: '<strong>History:</strong> Tick-borne encephalitis vaccines have been used for decades in endemic regions and are an important example of region-specific vaccination based on geography and exposure risk.<br><br><strong>Safety:</strong> These vaccines are generally safe, with local soreness, mild fever, and headache among the most common side effects.',
+      sources: ['https://historyofvaccines.org', 'https://www.who.int']
+    }
+  }
+
 ];
 
 // ──────────────────────────────────────────────────────────────
