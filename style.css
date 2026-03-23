@@ -410,15 +410,17 @@ p, li { text-wrap: pretty; }
 }
 @media (max-width: 680px) {
   .card-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+  .flip-card { aspect-ratio: 3/2; }
 }
 @media (max-width: 440px) {
-  .card-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .card-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
+  .flip-card { aspect-ratio: 1/1; min-height: 100px; }
 }
 
 /* --- Flip Cards --- */
 .flip-card {
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/3;
   perspective: 1000px;
   cursor: pointer;
   border-radius: var(--radius-lg);
@@ -510,7 +512,7 @@ p, li { text-wrap: pretty; }
 }
 .card-name {
   font-family: var(--font-display);
-  font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  font-size: clamp(0.72rem, 3.2vw, 0.9rem);
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.2;
