@@ -403,44 +403,52 @@ p, li { text-wrap: pretty; }
 /* --- Card Grid --- */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--space-4);
   max-width: 780px;
   margin: 0 auto;
-}
-@media (max-width: 680px) {
-  .card-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
-  .flip-card { aspect-ratio: 3/2; }
-}
-@media (max-width: 440px) {
-  .card-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-2); }
-  .flip-card { aspect-ratio: 1/1; min-height: 100px; }
+  align-items: stretch;
 }
 
 /* --- Flip Cards --- */
 .flip-card {
   width: 100%;
-  aspect-ratio: 4/3;
+  min-height: 140px;
+  aspect-ratio: 4 / 3;
   perspective: 1000px;
+  -webkit-perspective: 1000px;
   cursor: pointer;
   border-radius: var(--radius-lg);
-}
-.flip-card:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 3px; }
-.flip-card-inner {
   position: relative;
+  display: block;
+}
+
+.flip-card:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.flip-card-inner {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: var(--radius-lg);
 }
+
 .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
+
 .flip-card-front,
 .flip-card-back {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: var(--radius-lg);
@@ -453,91 +461,51 @@ p, li { text-wrap: pretty; }
   text-align: center;
   overflow: hidden;
 }
+
 /* Card back (face-down state) */
-.flip-card-front {
-  background: var(--color-accent);
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(255,255,255,0.035) 10px,
-    rgba(255,255,255,0.035) 20px
-  );
-  box-shadow: var(--shadow-card);
-  border: 2px solid rgba(255,255,255,0.1);
-}
-.flip-card-front .card-back-icon {
-  width: 32px;
-  height: 32px;
-  opacity: 0.6;
-  color: #fff;
-}
-.flip-card-front .card-back-label {
-  font-family: var(--font-display);
-  font-size: var(--text-xs);
-  font-weight: 700;
   color: rgba(255,255,255,0.5);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
 /* Card front (face-up state) */
 .flip-card-back {
   transform: rotateY(180deg);
   box-shadow: var(--shadow-card);
 }
+
 .flip-card-back.disease-card {
   background: var(--color-disease-bg);
   border: 2px solid var(--color-disease-border);
 }
+
 .flip-card-back.vaccine-card {
   background: var(--color-vaccine-bg);
   border: 2px solid var(--color-vaccine-border);
 }
-.card-type-badge {
-  font-size: var(--text-xs);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 2px var(--space-2);
-  border-radius: var(--radius-full);
-  margin-bottom: 2px;
-}
-.disease-card .card-type-badge {
-  background: rgba(196,94,0,0.15);
-  color: var(--color-disease);
-}
-.vaccine-card .card-type-badge {
-  background: rgba(11,122,117,0.15);
-  color: var(--color-vaccine);
-}
-.card-name {
-  font-family: var(--font-display);
-  font-size: clamp(0.72rem, 3.2vw, 0.9rem);
-  font-weight: 700;
-  color: var(--color-text);
-  line-height: 1.2;
-}
+
 /* Hover state — only on unflipped, unmatched cards */
 .flip-card:not(.flipped):not(.matched):hover .flip-card-front {
   background: var(--color-primary);
   border-color: var(--color-primary-hover);
 }
+
 .flip-card:not(.flipped):not(.matched):hover .flip-card-front .card-back-icon {
   opacity: 1;
 }
+
 /* Matched state */
-.flip-card.matched .flip-card-back.disease-card {
-  background: var(--color-success-light);
-  border-color: var(--color-success);
-}
+.flip-card.matched .flip-card-back.disease-card,
 .flip-card.matched .flip-card-back.vaccine-card {
   background: var(--color-success-light);
   border-color: var(--color-success);
 }
+
 .flip-card.matched .card-type-badge {
   background: rgba(26,124,68,0.15);
   color: var(--color-success);
 }
+
 /* Mismatch animation */
 @keyframes shake {
   0%, 100% { transform: rotateY(180deg) translateX(0); }
@@ -546,6 +514,7 @@ p, li { text-wrap: pretty; }
   60% { transform: rotateY(180deg) translateX(-4px); }
   80% { transform: rotateY(180deg) translateX(4px); }
 }
+
 .flip-card.mismatch .flip-card-inner {
   animation: shake 0.45s ease;
 }
@@ -797,10 +766,28 @@ p, li { text-wrap: pretty; }
 .footer-credit a:hover { color: var(--color-text-muted); }
 
 /* --- Responsive --- */
-@media (max-width: 600px) {
-  .main-content { padding: var(--space-5) var(--space-4); }
-  .modal-card { padding: var(--space-5); }
-  .game-meta { gap: var(--space-3); }
-  .meta-item { min-width: 72px; padding: var(--space-2) var(--space-3); }
-  .summary-card { padding: var(--space-5) 0; }
+@media (max-width: 680px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+
+  .flip-card {
+    min-height: 120px;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media (max-width: 440px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+    grid-auto-rows: 120px;
+  }
+
+  .flip-card {
+    min-height: 120px;
+    height: 120px;
+    aspect-ratio: auto;
+  }
 }
